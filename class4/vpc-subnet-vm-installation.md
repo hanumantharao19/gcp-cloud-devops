@@ -1,5 +1,5 @@
 # GCP: Custom VPC, Subnet, VM Setup, and Web Server Installation
-
+  - VPC diagram reference: https://cloud.google.com/vpc/docs/overview
 ## ✨ 1. Introduction
 
 - **What is a VPC?**

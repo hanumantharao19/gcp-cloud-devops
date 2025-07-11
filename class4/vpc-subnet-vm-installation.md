@@ -1,6 +1,6 @@
 # GCP: Custom VPC, Subnet, VM Setup, and Web Server Installation
 
-## ✨ 1. Introduction (1 min)
+## ✨ 1. Introduction
 
 - **What is a VPC?**
   - A VPC (Virtual Private Cloud) in GCP is a logically isolated network where you can run your virtual machines, containers, and other services securely.
@@ -22,7 +22,7 @@
 
 ---
 
-## 💡 2. Create Custom VPC & Subnet (2–3 mins)
+## 💡 2. Create Custom VPC & Subnet
 
 1. Go to **VPC network > VPC networks > Create VPC network**
 2. Fill the form:
@@ -36,7 +36,7 @@
 
 ---
 
-## 🔒 3. Create Firewall Rules (1–2 mins)
+## 🔒 3. Create Firewall Rules
 
 - **What is a Firewall in GCP?**
   - GCP firewall rules control incoming and outgoing traffic to VM instances.
@@ -63,7 +63,7 @@ Navigate to **VPC network > Firewall rules > Create firewall rule**
 
 ---
 
-## 🚀 4. Create a VM in Custom VPC (3–4 mins)
+## 🚀 4. Create a VM in Custom VPC
 
 1. Go to **Compute Engine > VM instances > Create Instance**
 2. Fill details:
@@ -79,7 +79,7 @@ Navigate to **VPC network > Firewall rules > Create firewall rule**
 
 ---
 
-## 🚼 5. Connect to VM & Install Web Server (1–2 mins)
+## 🚼 5. Connect to VM & Install Web Server
 
 1. Click **SSH** to connect to your VM
 2. Run the following commands to install Apache:
@@ -87,4 +87,9 @@ Navigate to **VPC network > Firewall rules > Create firewall rule**
 ```bash
 sudo apt update
 sudo apt install apache2 -y
-
+sudo systemctl start apache2
+sudo systemctl enable apache2
+```
+3. Get external IP of the VM (visible in VM list)
+4. Access the website in your browser
+   - You should see the Apache2 Ubuntu Default Page.

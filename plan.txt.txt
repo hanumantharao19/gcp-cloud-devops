@@ -1,0 +1,62 @@
+ Class 8: Google Cloud Pub/Sub (UI + CLI)
+Title suggestion:
+📩 Class 8 – Google Cloud Pub/Sub Explained with Hands-on | Free GCP & DevOps in Telugu
+
+Topics to cover:
+
+What is Pub/Sub? Use cases in real-world projects (decouple services, event-driven architecture)
+
+Create Pub/Sub topic via UI and CLI
+
+Create a subscription
+
+Publish and receive test messages (via CLI)
+
+Real-life DevOps use cases (CI triggers, log pipelines, file processing)
+
+🔸 Class 9: Google Secret Manager (UI + CLI)
+Title suggestion:
+🔐 Class 9 – Google Secret Manager in GCP with Hands-on | Secure Automation in Telugu
+
+Topics to cover:
+
+What is Secret Manager?
+
+Why not hardcode credentials in code?
+
+Create secrets via UI
+
+Retrieve secrets via CLI
+
+IAM permissions required for Secret Manager
+
+Real-world example (store API key / DB password)
+
+🔸 Class 10: Cloud Functions with Pub/Sub
+Title suggestion:
+⚙️ Class 10 – Deploy Cloud Function Triggered by Pub/Sub | Event-Driven Demo in Telugu
+
+Topics to cover:
+
+What are Cloud Functions? When to use them?
+
+Types of triggers (HTTP, Pub/Sub, Storage)
+
+Create a function that listens to Pub/Sub
+
+Logs the message to console
+
+(Simple logic — this builds base for next class)
+
+🔸 Class 11: Project – JSON to CSV with Cloud Function
+Title suggestion:
+📁 Class 11 – Project: Convert JSON to CSV using Cloud Function | GCP Automation Telugu
+
+Flow:
+
+Upload JSON → GCS triggers Pub/Sub → Cloud Function
+
+Reads file → Converts to CSV → Uploads to second bucket
+
+Bonus: Pull a secret from Secret Manager (optional)
+

@@ -66,24 +66,22 @@ Bonus: Pull a secret from Secret Manager (optional)
 
 
 -------------
-5️⃣	Disk Types + Instance Templates (basic infra scaling)
-6️⃣	Managed Instance Groups (MIG)
-7️⃣	Load Balancer with MIGs
-8️⃣	VPC Deep Dive – Subnets, routes, firewall, flow logs
-9️⃣	Shared VPC – Multi-project networking
-🔟	Cloud NAT Gateway – Private VM access internet
-1️⃣1️⃣	Google Cloud Storage (GCS) – Create/upload/download via UI & CLI
-1️⃣2️⃣	Upload from VM to GCS using Service Account
-1️⃣3️⃣	Service Account Deep Dive – Roles, purpose, least privilege
-1️⃣4️⃣	Pub/Sub – Topic, subscription, CLI, event-driven use cases
-1️⃣5️⃣	Secret Manager – Store secrets, IAM, CLI/UI
-1️⃣6️⃣	Cloud Function with Pub/Sub Trigger
-1️⃣7️⃣	Mini Project – Upload JSON → Cloud Function → Convert to CSV → Store
-1️⃣8️⃣	IAM Deep Dive – Custom roles, project/org-level permissions
-1️⃣9️⃣	Cloud Monitoring + Logging – Metrics, log-based alerts
-2️⃣0️⃣	Cloud Build CI/CD – Trigger deploy from GitHub repo
-
-
+- 5️⃣	Disk Types + Instance Templates (basic infra scaling)
+- 6️⃣	Managed Instance Groups (MIG)
+- 7️⃣	Load Balancer with MIGs
+- 8️⃣	VPC Deep Dive – Subnets, routes, firewall, flow logs
+- 9️⃣	Shared VPC – Multi-project networking
+- 🔟	Cloud NAT Gateway – Private VM access internet
+- 1️⃣1️⃣	Google Cloud Storage (GCS) – Create/upload/download via UI & CLI
+- 1️⃣2️⃣	Upload from VM to GCS using Service Account
+- 1️⃣3️⃣	Service Account Deep Dive – Roles, purpose, least privilege
+- 1️⃣4️⃣	Pub/Sub – Topic, subscription, CLI, event-driven use cases
+- 1️⃣5️⃣	Secret Manager – Store secrets, IAM, CLI/UI
+- 1️⃣6️⃣	Cloud Function with Pub/Sub Trigger
+- 1️⃣7️⃣	Mini Project – Upload JSON → Cloud Function → Convert to CSV → Store
+- 1️⃣8️⃣	IAM Deep Dive – Custom roles, project/org-level permissions
+- 1️⃣9️⃣	Cloud Monitoring + Logging – Metrics, log-based alerts
+- 2️⃣0️⃣	Cloud Build CI/CD – Trigger deploy from GitHub repo
 - 21	Cloud Scheduler with Pub/Sub or HTTP Trigger
 - 22	Cloud Tasks – Queuing with Cloud Functions
 - 23	Cloud Logging – Logs Explorer, export to BigQuery

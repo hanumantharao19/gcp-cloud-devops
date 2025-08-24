@@ -64,39 +64,7 @@ In this class, we’ll focus on **Pub/Sub trigger**.
 ```bash
 gcloud pubsub topics create my-topic
 ```
-
-### ✅ Step 2: Write Cloud Function Code
-
-Create a file named `index.js` with the following content:
-
-```javascript
-/**
- * Triggered from a message on a Cloud Pub/Sub topic.
- * Logs the message to the console.
- */
-exports.helloPubSub = (event, context) => {
-  const message = event.data
-    ? Buffer.from(event.data, 'base64').toString()
-    : 'Hello, World';
-
-  console.log(`Received message: ${message}`);
-};
-```
-
-And a `package.json`:
-
-```json
-{
-  "name": "pubsub-function",
-  "version": "1.0.0",
-  "main": "index.js",
-  "dependencies": {}
-}
-```
-
-### ✅ Step 3: Deploy the Function
-
-#### 📁 Option 1: Deploy from Local Folder
+####  Deploy the Function from Local Folder
 
 Make sure `index.js` and `package.json` are in the same folder. Then run:
 
@@ -107,34 +75,6 @@ gcloud functions deploy helloPubSub \
   --entry-point=helloPubSub \
   --region=us-central1
 ```
-
-#### 📁 Option 2: Deploy from GitHub Repository
-
-If your function code is stored in Cloud Source Repositories (CSR) linked to GitHub, and located under `cloud-function-repo/sample`, use the following:
-
-```bash
-gcloud functions deploy helloPubSub \
-  --runtime=nodejs18 \
-  --trigger-topic=my-topic \
-  --entry-point=helloPubSub \
-  --region=us-central1 \
-  --source=https://source.developers.google.com/projects/<PROJECT_ID>/repos/cloud-function-repo/moveable-aliases/main/paths/sample
-```
-
-> 📌 Note:
->
-> - Make sure GitHub is connected to GCP via Cloud Source Repositories.
-
-🔗 **How to Connect GitHub to Cloud Source Repositories:**
-
-1. Go to GCP Console → **Source Repositories** → Click **Add Repository**.
-2. Choose **Connect External Repository**.
-3. Select **GitHub** and authorize your GitHub account.
-4. Choose the GitHub repo you want to connect.
-5. Click **Connect Repository**.
-
-Once connected, your GitHub repo will be available under Cloud Source Repositories and you can deploy from it.
-
 > - This method allows GCP to fetch your code directly from the specified GitHub repo path.
 
 ```bash

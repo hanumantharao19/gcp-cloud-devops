@@ -1,0 +1,5 @@
+project_id  = "<YOUR_PROJECT_ID>"
+region      = "us-east1"
+vpc_name    = "dev-vpc"
+subnet_name = "dev-subnet-01"
+subnet_cidr = "10.0.1.0/24"

@@ -72,15 +72,4 @@ Terraform is one of the most widely adopted IaC tools because of:
 
 -   Human-readable & simple, designed for infra.
 
-------------------------------------------------------------------------
 
-# 4. Where Terraform Fits in DevOps?
-
-Terraform sits in the **Provisioning Layer** of DevOps:
-
--   **CI/CD:** Jenkins/GitHub Actions → trigger Terraform → deploy
-    infra\
--   **Containers:** Provision Kubernetes clusters and workloads\
--   **Monitoring & Scaling:** Combine with Prometheus/Grafana/Auto
-    Scaling\
--   **Multi-cloud & Hybrid Cloud Management**

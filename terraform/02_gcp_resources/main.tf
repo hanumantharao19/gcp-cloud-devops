@@ -1,47 +1,19 @@
-provider "aws" {
-    region = "us-east-1"
+provider "google" {
+  project = "<YOUR_PROJECT_ID>"
+  region  = "us-east1"
 }
 
-resource "aws_vpc" "vpc" {
-  cidr_block       = "10.0.0.0/16"
-  instance_tenancy = "default"
-
-  tags = {
-    Name = "dev-vpc"
-  }
-}
-resource "aws_subnet" "subnet" {
-  vpc_id     = aws_vpc.vpc.id
-  cidr_block = "10.0.1.0/24"
-
-  tags = {
-    Name = "dev-subnet-01"
-  }
+# Create VPC
+resource "google_compute_network" "vpc" {
+  name                    = "dev-vpc"
+  auto_create_subnetworks = false
 }
 
-resource "aws_internet_gateway" "gw" {
-  vpc_id = aws_vpc.vpc.id
-
-  tags = {
-    Name = "dev-igw"
-  }
+# Create Subnet
+resource "google_compute_subnetwork" "subnet" {
+  name          = "dev-subnet-01"
+  ip_cidr_range = "10.0.1.0/24"
+  region        = "us-east1"
+  network       = google_compute_network.vpc.id
 }
 
-resource "aws_route_table" "rt" {
-  vpc_id     = aws_vpc.vpc.id
-
-  route {
-    cidr_block = "0.0.0.0/0"
-    gateway_id = aws_internet_gateway.gw.id
-  }
-
-
-  tags = {
-    Name = "dev-rt"
-  }
-}
-
-resource "aws_route_table_association" "rta" {
-  subnet_id      = aws_subnet.subnet.id
-  route_table_id = aws_route_table.rt.id
-}
